@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  color: hsl(215, 51%, 70%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 1.2em;
+}
+.card {
+  padding: 15px;
+  width: 300px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+}
+
+.card > * {
+  margin-bottom: 10px;
+}
+.link {
+  color: hsl(0, 0%, 100%);
+}
+.link:hover {
+  color: hsl(178, 100%, 50%);
+  transition: 740ms;
+}
+
+.price {
+  color: hsl(178, 100%, 50%);
+}
+
+.price::before {
+  content: "";
+  display: inline-block;
+  background-image: url(./images/icon-ethereum.svg);
+  width: 11px;
+  height: 18px;
+}
+
+.time::before {
+  content: "";
+  display: inline-block;
+  background-image: url(./images/icon-clock.svg);
+  width: 17px;
+  height: 17px;
+}
+
+.attribution {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 5px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.texttt {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  height: 1px;
+  background-color: hsl(215, 51%, 70%);
+  border-bottom: 0;
+}
+.kartina {
+  display: inline-block;
+  width: 30px;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nftimg {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.nftimg::after {
+  content: "";
+  position: absolute;
+  background-color: hsl(178, 100%, 50%, 0.5);
+  background-image: url(./images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0; */
+  inset: 0;
+  opacity: 0;
+  transition: 740ms;
+}
+.nftimg:hover::after {
+  opacity: 1;
+}
